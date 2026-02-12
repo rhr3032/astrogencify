@@ -1,44 +1,33 @@
-# VIIO Astro Theme
+# 🚀 Getting Started
 
-VIIO is an experimental Astro landing page theme featuring interactive Three.js elements.
+Follow the steps below to set up and run the project locally.
 
-## Getting Started
+## 1️⃣ Install Dependencies
 
-Edit the following files to customize links, content, and layout details:
-
-- `src/pages/index.astro`
-- `src/layouts/Layout.astro`
-
-## Preview
-
-Live preview:  
-https://viio.pages.dev/
-
-## Installation
-
-Install dependencies:
+Install all required packages using npm:
 
 ```bash
 npm install
-````
+```
 
-Run the development server:
+### 2️⃣ Run Development Server
+
+Start the local development server:
 
 ```bash
 npm run dev
 ```
 
-Build the production site (output to `./dist/`):
+The app will be available at the local development URL shown in your terminal.
+
+### 3️⃣ Build for Production
+
+Create an optimized production build:
 
 ```bash
 npm run build
 ```
 
-## Customization
+The production-ready files will be generated inside the `./dist/` directory.
 
-For customizations, additional pages, or support, contact:
-hi[at]hashemian.me
-
-## License
-
-This theme and all included components may be used **for non-commercial purposes only**.
+---
