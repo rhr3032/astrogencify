@@ -1,0 +1,130 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Business Consulting & Strategy">
+  <HeroHome
+    title="Business Consulting & Strategy"
+    subtitle="Digital transformation consulting that aligns technology with business goals."
+    cta={{ title: "Schedule Consultation", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Strategic Guidance for Digital Growth</h2>
+        <p class="u-text">
+          We help organizations navigate digital transformation with strategic
+          consulting that covers technology roadmaps, process optimization,
+          vendor selection, and change management. Our consultants bring deep
+          technical expertise combined with business acumen to guide critical
+          decisions and accelerate growth.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Consulting Services</h3>
+          <ul class="u-text">
+            <li>Digital transformation strategy</li>
+            <li>Technology roadmap planning</li>
+            <li>Process optimization & automation</li>
+            <li>Vendor & technology selection</li>
+            <li>Product strategy & discovery</li>
+            <li>Technical due diligence</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Approach</h3>
+          <ul class="u-text">
+            <li>Stakeholder interviews & workshops</li>
+            <li>Current state assessment</li>
+            <li>Gap analysis & recommendations</li>
+            <li>Roadmap & implementation plan</li>
+            <li>Change management support</li>
+            <li>Executive reporting & metrics</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Expertise Areas</h3>
+          <ul class="u-text">
+            <li>SaaS product strategy</li>
+            <li>Platform architecture</li>
+            <li>Agile & DevOps transformation</li>
+            <li>Cloud migration strategy</li>
+            <li>Data & analytics strategy</li>
+            <li>Compliance & security planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Get strategic guidance for your next move</h2>
+      <Button title="Book a consultation" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

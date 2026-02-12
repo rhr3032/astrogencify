@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="UI and UX Design">
+  <HeroHome
+    title="UI and UX Design"
+    subtitle="Research, flows, and interfaces that convert and retain users."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Overview</h2>
+        <p class="u-text">
+          We design user journeys that reduce friction and guide users to key
+          actions. Our design systems make it easy to scale new features while
+          keeping consistency across the product.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Deliverables</h3>
+          <ul class="u-text">
+            <li>User research and personas</li>
+            <li>UX flows and wireframes</li>
+            <li>UI design and prototypes</li>
+            <li>Design system and components</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Process</h3>
+          <ul class="u-text">
+            <li>Discovery and audit</li>
+            <li>Journey mapping and testing</li>
+            <li>Visual design and QA</li>
+            <li>Handoff and support</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Tools</h3>
+          <ul class="u-text">
+            <li>Figma and FigJam</li>
+            <li>Design system libraries</li>
+            <li>Prototype testing tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Need a design partner?</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

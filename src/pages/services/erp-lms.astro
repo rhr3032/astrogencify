@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="ERP and LMS Systems">
+  <HeroHome
+    title="ERP and LMS Systems"
+    subtitle="Enterprise-grade systems with role-based access and integrations."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Overview</h2>
+        <p class="u-text">
+          We design and build ERP and LMS platforms that streamline workflows
+          and deliver better reporting. Our teams handle data migration,
+          integration, and security from day one.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Deliverables</h3>
+          <ul class="u-text">
+            <li>Workflow and data mapping</li>
+            <li>Role-based access and permissions</li>
+            <li>Reporting and dashboards</li>
+            <li>Integrations and automation</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Process</h3>
+          <ul class="u-text">
+            <li>Discovery workshops</li>
+            <li>System design and UX</li>
+            <li>Incremental module delivery</li>
+            <li>QA and change management</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Stack</h3>
+          <ul class="u-text">
+            <li>React and TypeScript</li>
+            <li>PostgreSQL and data warehousing</li>
+            <li>SSO and security tooling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Plan your enterprise rollout</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

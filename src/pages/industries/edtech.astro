@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="EdTech Industry Solutions">
+  <HeroHome
+    title="EdTech Industry Solutions"
+    subtitle="Learning platforms that engage students and empower educators."
+    cta={{ title: "Discuss Your Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Transform Education with Technology</h2>
+        <p class="u-text">
+          We create innovative educational technology solutions that make
+          learning more accessible, engaging, and effective. From LMS platforms
+          to interactive learning apps, we help educators reach more students
+          with better outcomes.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Solutions</h3>
+          <ul class="u-text">
+            <li>Learning Management Systems</li>
+            <li>Online course platforms</li>
+            <li>Student information systems</li>
+            <li>Virtual classrooms</li>
+            <li>Assessment & grading tools</li>
+            <li>Educational mobile apps</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Features</h3>
+          <ul class="u-text">
+            <li>Video conferencing</li>
+            <li>Interactive content delivery</li>
+            <li>Progress tracking & analytics</li>
+            <li>Gamification elements</li>
+            <li>Collaborative learning tools</li>
+            <li>Parent/teacher portals</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Technologies</h3>
+          <ul class="u-text">
+            <li>React & TypeScript</li>
+            <li>WebRTC for video</li>
+            <li>Moodle & Canvas integration</li>
+            <li>xAPI (Tin Can) tracking</li>
+            <li>AI-powered tutoring</li>
+            <li>Accessibility compliance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Build your EdTech platform</h2>
+      <Button title="Get started" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

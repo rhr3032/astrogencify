@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Real Estate Industry Solutions">
+  <HeroHome
+    title="Real Estate Industry Solutions"
+    subtitle="Property platforms that connect buyers, sellers, and agents."
+    cta={{ title: "Discuss Your Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Real Estate Technology That Sells</h2>
+        <p class="u-text">
+          We build real estate platforms that streamline property searches,
+          showcase listings beautifully, and facilitate transactions. Our
+          solutions help agents, brokers, and property developers reach more
+          clients and close deals faster.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Solutions</h3>
+          <ul class="u-text">
+            <li>Property listing portals</li>
+            <li>MLS integration platforms</li>
+            <li>Virtual tour experiences</li>
+            <li>CRM for real estate</li>
+            <li>Property management systems</li>
+            <li>Investment platforms</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Features</h3>
+          <ul class="u-text">
+            <li>Advanced search & filters</li>
+            <li>Interactive maps</li>
+            <li>360° virtual tours</li>
+            <li>Mortgage calculators</li>
+            <li>Lead generation tools</li>
+            <li>Document management</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Technologies</h3>
+          <ul class="u-text">
+            <li>Next.js & React</li>
+            <li>Google Maps API</li>
+            <li>MLS & IDX integration</li>
+            <li>3D rendering (Three.js)</li>
+            <li>AI property valuation</li>
+            <li>Mobile apps (iOS/Android)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Build your real estate platform</h2>
+      <Button title="Schedule a call" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Manufacturing Industry Solutions">
+  <HeroHome
+    title="Manufacturing Industry Solutions"
+    subtitle="Smart manufacturing platforms that optimize production and supply chain."
+    cta={{ title: "Discuss Your Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Industry 4.0 Technology Solutions</h2>
+        <p class="u-text">
+          We develop manufacturing technology platforms that connect machines,
+          optimize workflows, and provide real-time visibility into production.
+          From MES to predictive maintenance, our solutions help manufacturers
+          increase efficiency and reduce downtime.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Solutions</h3>
+          <ul class="u-text">
+            <li>Manufacturing Execution Systems</li>
+            <li>Supply chain management</li>
+            <li>Quality management systems</li>
+            <li>Inventory & warehouse management</li>
+            <li>Predictive maintenance</li>
+            <li>Production planning tools</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Features</h3>
+          <ul class="u-text">
+            <li>Real-time monitoring dashboards</li>
+            <li>IoT device integration</li>
+            <li>Production analytics</li>
+            <li>Work order management</li>
+            <li>Barcode & RFID tracking</li>
+            <li>Mobile apps for shop floor</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Technologies</h3>
+          <ul class="u-text">
+            <li>Industrial IoT protocols</li>
+            <li>Time-series databases</li>
+            <li>Machine learning & AI</li>
+            <li>Edge computing</li>
+            <li>ERP system integration</li>
+            <li>Cloud & on-premise hosting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Transform your manufacturing operations</h2>
+      <Button title="Schedule a call" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

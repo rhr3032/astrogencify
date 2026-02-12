@@ -1,0 +1,66 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  title = "Start a Project",
+  subtitle = "Tell us about your goals, timeline, and scope. We will respond within 24 hours.",
+} = Astro.props;
+---
+
+<section class="sy-start-project">
+  <div class="u-container container">
+    <div class="card glass-card">
+      <div class="content">
+        <h2 class="u-heading" data-sy-reveal="words">{title}</h2>
+        <p class="u-text" data-sy-reveal="lines">{subtitle}</p>
+      </div>
+      <Button title="Start a Project" url="/contact" arrow modal="project" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .sy-start-project {
+    margin: 6rem 0 8rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .card {
+    width: 100%;
+    border-radius: 1.75rem;
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media (--mq-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .content {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 40rem;
+  }
+
+  .content h2 {
+    --fs: 2.4rem;
+  }
+
+  .content p {
+    color: var(--color-text-alt);
+  }
+</style>

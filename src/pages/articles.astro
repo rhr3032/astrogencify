@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import ArticlesSection from "../components/ArticlesSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+---
+
+<Layout title="Articles">
+  <HeroHome
+    title="Articles"
+    subtitle="Insights on product strategy, design systems, engineering, and delivery."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <ArticlesSection
+    title="Latest articles"
+    subtitle="Practical guides and playbooks from our team." 
+    items={[
+      {
+        image: { src: "/image-1.jpg", alt: "Discovery workshop", width: 6000, height: 4000 },
+        title: "The Product Discovery Sprint Playbook",
+        excerpt: "A step-by-step guide to align stakeholders, validate assumptions, and define a roadmap in two weeks.",
+        meta: ["Strategy", "8 min read", "Jan 12, 2026"],
+        link: { title: "Read article", url: "/articles/product-discovery-sprint" },
+      },
+      {
+        image: { src: "/image-2.jpg", alt: "Design system tokens", width: 2689, height: 4032 },
+        title: "Design Systems That Scale Across Teams",
+        excerpt: "How to build a living system with tokens, governance, and clear ownership.",
+        meta: ["Design", "7 min read", "Jan 08, 2026"],
+        link: { title: "Read article", url: "/articles/design-systems-scale" },
+      },
+      {
+        image: { src: "/image-3.jpg", alt: "SaaS analytics", width: 3734, height: 5359 },
+        title: "SaaS Activation Metrics That Matter",
+        excerpt: "Track the leading indicators that show product value before churn creeps in.",
+        meta: ["SaaS", "6 min read", "Jan 05, 2026"],
+        link: { title: "Read article", url: "/articles/saas-activation-metrics" },
+      },
+      {
+        image: { src: "/image-1.jpg", alt: "QA automation dashboard", width: 6000, height: 4000 },
+        title: "QA Automation Playbook for Fast Releases",
+        excerpt: "Balance manual and automated testing with a risk-based QA strategy.",
+        meta: ["QA", "9 min read", "Dec 28, 2025"],
+        link: { title: "Read article", url: "/articles/qa-automation-playbook" },
+      },
+      {
+        image: { src: "/image-2.jpg", alt: "Cloud cost review", width: 2689, height: 4032 },
+        title: "Cloud Cost Optimization Without Downtime",
+        excerpt: "Reduce cloud spend through architecture fixes, autoscaling, and governance.",
+        meta: ["Cloud", "7 min read", "Dec 20, 2025"],
+        link: { title: "Read article", url: "/articles/cloud-cost-optimization" },
+      },
+      {
+        image: { src: "/image-3.jpg", alt: "Fintech compliance", width: 3734, height: 5359 },
+        title: "Fintech UX and Compliance, Together",
+        excerpt: "Design secure onboarding flows that satisfy KYC/AML without hurting conversion.",
+        meta: ["FinTech", "8 min read", "Dec 14, 2025"],
+        link: { title: "Read article", url: "/articles/fintech-compliance-ux" },
+      },
+      {
+        image: { src: "/image-1.jpg", alt: "Telehealth design", width: 6000, height: 4000 },
+        title: "Telehealth UX Patterns Patients Trust",
+        excerpt: "Create calm, accessible telehealth flows that reduce no-shows and confusion.",
+        meta: ["Healthcare", "6 min read", "Dec 08, 2025"],
+        link: { title: "Read article", url: "/articles/healthcare-ux-telehealth" },
+      },
+      {
+        image: { src: "/image-2.jpg", alt: "Marketplace growth", width: 2689, height: 4032 },
+        title: "Marketplace Growth Loops for Supply & Demand",
+        excerpt: "Simple growth loops that keep both sides of your marketplace engaged.",
+        meta: ["Marketplace", "7 min read", "Nov 30, 2025"],
+        link: { title: "Read article", url: "/articles/marketplace-growth-loops" },
+      },
+      {
+        image: { src: "/image-3.jpg", alt: "Mobile onboarding", width: 3734, height: 5359 },
+        title: "Mobile Onboarding Checklist for Higher Activation",
+        excerpt: "Increase completion rates with progressive disclosure and smart defaults.",
+        meta: ["Mobile", "5 min read", "Nov 22, 2025"],
+        link: { title: "Read article", url: "/articles/mobile-onboarding-checklist" },
+      },
+      {
+        image: { src: "/image-1.jpg", alt: "Revenue operations", width: 6000, height: 4000 },
+        title: "B2B CRM and RevOps Alignment",
+        excerpt: "Unify sales, marketing, and support data for a complete revenue view.",
+        meta: ["B2B", "8 min read", "Nov 12, 2025"],
+        link: { title: "Read article", url: "/articles/b2b-crm-revops" },
+      },
+    ]}
+  />
+
+  <ContactSection
+    title="Have an idea to ship?"
+    subtitle="We can help plan, design, and build your next release."
+  />
+</Layout>

@@ -1,0 +1,85 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="SaaS Activation Metrics That Matter">
+  <HeroHome
+    title="SaaS Activation Metrics That Matter"
+    subtitle="Track the leading indicators that show product value before churn creeps in."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">SaaS • 6 min read • Jan 05, 2026</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Define activation</h2>
+        <p class="u-text">
+          Activation is the moment users experience core value. Define it in
+          measurable terms and align onboarding to get there fast.
+        </p>
+        <h3 class="u-heading">Metrics to track</h3>
+        <ul class="u-text">
+          <li>Time-to-value and first success action</li>
+          <li>Onboarding completion rate</li>
+          <li>Feature adoption of core workflows</li>
+          <li>Retention over the first 30 days</li>
+        </ul>
+        <h3 class="u-heading">Improve activation</h3>
+        <p class="u-text">
+          Combine progressive disclosure with behavioral triggers and contextual
+          guidance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Improve your activation funnel</h2>
+      <Button title="Book a session" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>

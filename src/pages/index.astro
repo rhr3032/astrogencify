@@ -1,0 +1,556 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import TextMarquee from "../components/TextMarquee.astro";
+import ImageMarquee from "../components/ImageMarquee.astro";
+import Faqs from "../components/Faqs.astro";
+import StepsTimeline from "../components/StepsTimeline.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ValuesSection from "../components/ValuesSection.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import IndustrySection from "../components/IndustrySection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import ArticlesSection from "../components/ArticlesSection.astro";
+import PricingGrid from "../components/PricingGrid.astro";
+import Testimonials from "../components/Testimonials.astro";
+import ContactSection from "../components/ContactSection.astro";
+import GL from "../components/GL.astro";
+import GLPlaces from "../components/GlPlaces.astro";
+
+import logo1 from "../assets/logoipsum-344.svg";
+import logo2 from "../assets/logoipsum-350.svg";
+import logo3 from "../assets/logoipsum-345.svg";
+import logo4 from "../assets/logoipsum-385.svg";
+import logo5 from "../assets/logoipsum-375.svg";
+import logo6 from "../assets/logoipsum-378.svg";
+import logo7 from "../assets/logoipsum-346.svg";
+import logo8 from "../assets/logoipsum-331.svg";
+---
+
+<Layout title="VIIO Software Agency">
+  <HeroHome
+    title="Brand to Build. Product to Growth."
+    subtitle="We are a software agency delivering branding, UI/UX design, and full-stack development for web, mobile, SaaS, ERP, and LMS platforms."
+    cta={{
+      title: "Start a Project",
+      url: "/contact",
+    }}
+  />
+  <TextMarquee
+    class="marquee"
+    texts={[
+      "Branding",
+      "UI and UX Design",
+      "Webflow & Framer",
+      "Web and Mobile Development",
+      "SaaS Products",
+      "ERP and LMS",
+      "QA and Testing",
+      "Business Consulting",
+      "DevOps & Cloud",
+      "API Development",
+    ]}
+  />
+
+  <AboutSection
+    subtitle="About the agency"
+    title="A multi-disciplinary partner for product teams"
+    text="We help companies move from strategy to launch with a single team that covers branding, design, development, and QA. Our process blends research, rapid prototyping, and engineering excellence to ship reliable software on tight timelines."
+    stats={[
+      { value: "120+", label: "Products shipped" },
+      { value: "18", label: "Industries served" },
+      { value: "9 yrs", label: "Average team experience" },
+      { value: "4.9/5", label: "Client satisfaction" },
+    ]}
+  />
+
+  <ValuesSection
+    title="Mission, vision, and values"
+    subtitle="We design and build software that makes organizations faster, clearer, and more confident."
+    items={[
+      {
+        title: "Mission",
+        text: "Help teams launch meaningful products through focused branding, human-centered design, and reliable engineering.",
+      },
+      {
+        title: "Vision",
+        text: "Create a world where every organization can deliver delightful digital experiences without technical friction.",
+      },
+      {
+        title: "Values",
+        text: "Clarity in strategy, precision in design, quality in code, and transparency in collaboration.",
+      },
+    ]}
+  />
+
+  <ServicesSection
+    title="Services built for growth"
+    subtitle="From early discovery to production support, we cover the full product lifecycle with senior specialists."
+    cta={{ title: "View all services", url: "/services" }}
+    items={[
+      {
+        title: "Branding and identity",
+        text: "Positioning, messaging, naming, and visual systems that unify your product and marketing.",
+        tags: ["Strategy", "Naming", "Visual system"],
+        link: { title: "Service details", url: "/services/branding" },
+      },
+      {
+        title: "UI and UX design",
+        text: "Research, UX flows, and interface systems that translate business goals into clear experiences.",
+        tags: ["Research", "Design systems", "Prototypes"],
+        link: { title: "Service details", url: "/services/ui-ux" },
+      },
+      {
+        title: "Webflow design & development",
+        text: "Custom Webflow sites with advanced interactions, CMS, and SEO optimization.",
+        tags: ["Webflow", "CMS", "Interactions"],
+        link: { title: "Service details", url: "/services/webflow-design" },
+      },
+      {
+        title: "Framer design & development",
+        text: "Interactive Framer sites with smooth animations and smart components.",
+        tags: ["Framer", "Animations", "React"],
+        link: { title: "Service details", url: "/services/framer-design" },
+      },
+      {
+        title: "Web development",
+        text: "Responsive web apps, landing pages, and dashboards built for speed and maintainability.",
+        tags: ["Front-end", "Back-end", "CMS"],
+        link: { title: "Service details", url: "/services/web-development" },
+      },
+      {
+        title: "Mobile apps",
+        text: "Native and cross-platform apps for Android and iOS with secure and scalable architecture.",
+        tags: ["Android", "iOS", "React Native"],
+        link: { title: "Service details", url: "/services/mobile-development" },
+      },
+      {
+        title: "SaaS product delivery",
+        text: "MVPs and scalable SaaS platforms with subscription flows, analytics, and admin tooling.",
+        tags: ["SaaS", "B2B", "Analytics"],
+        link: { title: "Service details", url: "/services/saas-products" },
+      },
+      {
+        title: "ERP and LMS systems",
+        text: "Complex enterprise platforms with role-based access, data pipelines, and integrations.",
+        tags: ["ERP", "LMS", "Integrations"],
+        link: { title: "Service details", url: "/services/erp-lms" },
+      },
+      {
+        title: "QA and testing",
+        text: "Manual and automated testing, QA strategy, and release management.",
+        tags: ["QA", "Automation", "Release"],
+        link: { title: "Service details", url: "/services/qa-testing" },
+      },
+      {
+        title: "Business consulting",
+        text: "Digital transformation consulting, technology roadmaps, and strategic planning.",
+        tags: ["Strategy", "Transformation", "Consulting"],
+        link: { title: "Service details", url: "/services/business-consulting" },
+      },
+      {
+        title: "DevOps & cloud",
+        text: "Scalable cloud architecture with CI/CD pipelines and container orchestration.",
+        tags: ["DevOps", "AWS", "Kubernetes"],
+        link: { title: "Service details", url: "/services/devops-cloud" },
+      },
+      {
+        title: "API development",
+        text: "RESTful and GraphQL APIs with secure third-party system integrations.",
+        tags: ["REST", "GraphQL", "Integrations"],
+        link: { title: "Service details", url: "/services/api-development" },
+      },
+    ]}
+  />
+
+  <IndustrySection
+    title="Specialized Industry Expertise"
+    subtitle="Deep knowledge in regulated, competitive sectors that require domain expertise."
+    cta={{ title: "View all industries", url: "/industries" }}
+    items={[
+      {
+        title: "Fintech",
+        text: "Secure financial platforms with compliance, encryption, and seamless UX for payments and banking.",
+        tags: ["Payments", "Banking", "Compliance"],
+        link: { title: "Learn more", url: "/industries/fintech" },
+      },
+      {
+        title: "Healthcare & Fitness",
+        text: "HIPAA-compliant health tech, telemedicine, fitness tracking, and patient care platforms.",
+        tags: ["Telemedicine", "EHR", "Wellness"],
+        link: { title: "Learn more", url: "/industries/healthcare" },
+      },
+      {
+        title: "E-commerce",
+        text: "High-converting online stores, marketplaces, and subscription commerce platforms.",
+        tags: ["Shopify", "Marketplaces", "Subscriptions"],
+        link: { title: "Learn more", url: "/industries/ecommerce" },
+      },
+      {
+        title: "EdTech",
+        text: "Learning management systems, online courses, and educational apps that engage students.",
+        tags: ["LMS", "E-learning", "EdTech"],
+        link: { title: "Learn more", url: "/industries/edtech" },
+      },
+      {
+        title: "Real Estate",
+        text: "Property listing platforms, MLS integration, virtual tours, and CRM for real estate pros.",
+        tags: ["Property Tech", "MLS", "Virtual Tours"],
+        link: { title: "Learn more", url: "/industries/real-estate" },
+      },
+      {
+        title: "Cybersecurity",
+        text: "Security monitoring, threat intelligence, and compliance management platforms.",
+        tags: ["Security", "Threat Detection", "Compliance"],
+        link: { title: "Learn more", url: "/industries/cybersecurity" },
+      },
+    ]}
+  />
+
+  <ProjectsSection
+    title="Selected projects"
+    subtitle="A snapshot of recent work across SaaS, enterprise, and mobile platforms."
+    cta={{ title: "View all projects", url: "/projects" }}
+    items={[
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "Atlas ERP dashboard",
+          width: 6000,
+          height: 4000,
+        },
+        title: "Atlas ERP Suite",
+        summary: "A modular ERP that unifies finance, HR, and operations across 12 regions.",
+        meta: ["ERP", "12 modules", "45 percent faster reporting"],
+        link: { title: "View project", url: "/projects/atlas-erp" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "Meridian LMS learning view",
+          width: 2689,
+          height: 4032,
+        },
+        title: "Meridian LMS",
+        summary: "An LMS for blended learning with cohort analytics and certification flows.",
+        meta: ["LMS", "150k learners", "Mobile first"],
+        link: { title: "View project", url: "/projects/meridian-lms" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "Nova SaaS analytics",
+          width: 3734,
+          height: 5359,
+        },
+        title: "Nova SaaS Platform",
+        summary: "A SaaS ops dashboard that helps teams manage subscriptions and churn.",
+        meta: ["SaaS", "B2B", "Product analytics"],
+        link: { title: "View project", url: "/projects/nova-saas" },
+      },
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "Pulse mobile banking interface",
+          width: 6000,
+          height: 4000,
+        },
+        title: "Pulse Mobile Banking",
+        summary: "Secure mobile app with biometric login, transfers, and investment tracking.",
+        meta: ["Mobile", "FinTech", "iOS & Android"],
+        link: { title: "View project", url: "/projects/pulse-mobile" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "Cobalt health portal",
+          width: 2689,
+          height: 4032,
+        },
+        title: "Cobalt Health Portal",
+        summary: "HIPAA-compliant patient portal with telehealth and care plan management.",
+        meta: ["Healthcare", "Telemedicine", "HIPAA"],
+        link: { title: "View project", url: "/projects/cobalt-health" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "Apex e-commerce platform",
+          width: 3734,
+          height: 5359,
+        },
+        title: "Apex E-commerce",
+        summary: "Multi-vendor marketplace with advanced search, reviews, and seller analytics.",
+        meta: ["E-commerce", "Marketplace", "2M products"],
+        link: { title: "View project", url: "/projects/apex-ecommerce" },
+      },
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "Zenith CRM dashboard",
+          width: 6000,
+          height: 4000,
+        },
+        title: "Zenith CRM",
+        summary: "Sales CRM with pipeline automation, forecasting, and custom report builder.",
+        meta: ["CRM", "Sales", "Automation"],
+        link: { title: "View project", url: "/projects/zenith-crm" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "FitTrack mobile app",
+          width: 2689,
+          height: 4032,
+        },
+        title: "FitTrack Pro",
+        summary: "Fitness tracking app with AI-powered workout plans and nutrition guidance.",
+        meta: ["Fitness", "Mobile", "AI/ML"],
+        link: { title: "View project", url: "/projects/fittrack-pro" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "PropLink real estate platform",
+          width: 3734,
+          height: 5359,
+        },
+        title: "PropLink",
+        summary: "Real estate platform with MLS integration, virtual tours, and agent CRM.",
+        meta: ["Real Estate", "MLS", "Virtual Tours"],
+        link: { title: "View project", url: "/projects/proplink" },
+      },
+    ]}
+  />
+
+  <StepsTimeline
+    title="How we work"
+    items={[
+      {
+        title: "Discover and define",
+        text: "We align on goals, users, and success metrics, then convert them into a clear roadmap.",
+      },
+      {
+        title: "Design and validate",
+        text: "Wireframes, prototypes, and visual systems to validate flow and reduce delivery risk.",
+      },
+      {
+        title: "Develop and iterate",
+        text: "Agile sprints with regular demos, code reviews, and continuous integration for quality delivery.",
+      },
+      {
+        title: "Test and refine",
+        text: "Comprehensive QA testing, performance optimization, and user acceptance testing before launch.",
+      },
+      {
+        title: "Launch and support",
+        text: "Production deployment, monitoring, documentation, and ongoing maintenance and optimization.",
+      },
+    ]}
+  />
+
+  <PricingGrid
+    title="Pricing plans"
+    subtitle="Flexible engagement models for startups, scale-ups, and enterprise teams."
+    items={[
+      {
+        title: "Launch",
+        price: "From $6k",
+        note: "Best for branding and MVP design sprints.",
+        features: [
+          "Brand discovery and positioning",
+          "UI and UX design sprint",
+          "Clickable prototype",
+          "Design system starter",
+        ],
+        link: { title: "See details", url: "#", modal: "project" },
+      },
+      {
+        title: "Growth",
+        price: "From $18k",
+        note: "Full product design and engineering for growth teams.",
+        features: [
+          "Product strategy and UX",
+          "Web or mobile development",
+          "QA and release support",
+          "Analytics and optimization",
+        ],
+        link: { title: "See details", url: "#", modal: "project" },
+      },
+      {
+        title: "Enterprise",
+        price: "Custom",
+        note: "ERP, LMS, and large-scale SaaS platforms.",
+        features: [
+          "Discovery workshops",
+          "Architecture and data planning",
+          "Security and compliance",
+          "Dedicated QA team",
+        ],
+        link: { title: "Talk to us", url: "#", modal: "project" },
+      },
+    ]}
+  />
+
+  <Testimonials
+    title="Client feedback"
+    subtitle="Teams trust us for clarity, delivery speed, and product quality."
+    items={[
+      {
+        quote:
+          "The team turned a complex ERP concept into a clear, usable system in record time.",
+        name: "Hannah Morris",
+        role: "VP Operations",
+        company: "Atlas Foods",
+      },
+      {
+        quote:
+          "Their UX process uncovered gaps we missed and the mobile app now exceeds KPIs.",
+        name: "Devon Park",
+        role: "Product Lead",
+        company: "Meridian Learn",
+      },
+      {
+        quote:
+          "Design and engineering felt like a single team. The SaaS launch hit every target.",
+        name: "Rita Gomez",
+        role: "Founder",
+        company: "Nova Systems",
+      },
+    ]}
+  />
+
+  <ImageMarquee
+    images={[
+      {
+        src: logo1.src,
+        alt: "Logo 1",
+      },
+      {
+        src: logo3.src,
+        alt: "Logo 3",
+      },
+      {
+        src: logo4.src,
+        alt: "Logo 4",
+      },
+      {
+        src: logo8.src,
+        alt: "Logo 8",
+      },
+      {
+        src: logo5.src,
+        alt: "Logo 5",
+      },
+      {
+        src: logo6.src,
+        alt: "Logo 6",
+      },
+      {
+        src: logo2.src,
+        alt: "Logo 2",
+      },
+      {
+        src: logo7.src,
+        alt: "Logo 7",
+      },
+    ]}
+  />
+
+  <ArticlesSection
+    title="From the studio"
+    subtitle="Product strategy, design, and engineering insights from our team."
+    cta={{ title: "View all articles", url: "/articles" }}
+    items={[
+      {
+        image: { src: "/image-1.jpg", alt: "Discovery workshop", width: 6000, height: 4000 },
+        title: "The Product Discovery Sprint Playbook",
+        excerpt: "Align stakeholders, validate assumptions, and define a roadmap in two weeks.",
+        meta: ["Strategy", "8 min read", "Jan 12, 2026"],
+        link: { title: "Read article", url: "/articles/product-discovery-sprint" },
+      },
+      {
+        image: { src: "/image-2.jpg", alt: "Design system tokens", width: 2689, height: 4032 },
+        title: "Design Systems That Scale Across Teams",
+        excerpt: "Build a living system with tokens, governance, and clear ownership.",
+        meta: ["Design", "7 min read", "Jan 08, 2026"],
+        link: { title: "Read article", url: "/articles/design-systems-scale" },
+      },
+      {
+        image: { src: "/image-3.jpg", alt: "SaaS analytics", width: 3734, height: 5359 },
+        title: "SaaS Activation Metrics That Matter",
+        excerpt: "Track the leading indicators that show product value before churn creeps in.",
+        meta: ["SaaS", "6 min read", "Jan 05, 2026"],
+        link: { title: "Read article", url: "/articles/saas-activation-metrics" },
+      },
+      {
+        image: { src: "/image-1.jpg", alt: "QA automation dashboard", width: 6000, height: 4000 },
+        title: "QA Automation Playbook for Fast Releases",
+        excerpt: "Balance manual and automated testing with a risk-based QA strategy.",
+        meta: ["QA", "9 min read", "Dec 28, 2025"],
+        link: { title: "Read article", url: "/articles/qa-automation-playbook" },
+      },
+      {
+        image: { src: "/image-2.jpg", alt: "Cloud cost review", width: 2689, height: 4032 },
+        title: "Cloud Cost Optimization Without Downtime",
+        excerpt: "Reduce cloud spend through architecture fixes, autoscaling, and governance.",
+        meta: ["Cloud", "7 min read", "Dec 20, 2025"],
+        link: { title: "Read article", url: "/articles/cloud-cost-optimization" },
+      },
+      {
+        image: { src: "/image-3.jpg", alt: "Fintech compliance", width: 3734, height: 5359 },
+        title: "Fintech UX and Compliance, Together",
+        excerpt: "Design secure onboarding flows that satisfy KYC/AML without hurting conversion.",
+        meta: ["FinTech", "8 min read", "Dec 14, 2025"],
+        link: { title: "Read article", url: "/articles/fintech-compliance-ux" },
+      },
+    ]}
+  />
+
+  <Faqs
+    title="Frequently Asked Questions"
+    mobileTitle="FAQs"
+    subtitle="Answers to common questions about our services and process."
+    items={[
+      {
+        question: "What types of clients do you work with?",
+        answer:
+          "We work with startups, scale-ups, and enterprise teams across SaaS, finance, education, and healthcare.",
+      },
+      {
+        question: "Do you handle both design and development?",
+        answer:
+          "Yes. We deliver branding, UX, UI, engineering, and QA as a single integrated team.",
+      },
+      {
+        question: "Can you join an existing product team?",
+        answer:
+          "Absolutely. We support in-house teams with focused design, development, or QA support.",
+      },
+      {
+        question: "How do you price projects?",
+        answer:
+          "We offer fixed-scope packages and dedicated team models based on timeline and complexity.",
+      },
+      {
+        question: "Do you provide post-launch support?",
+        answer:
+          "Yes. We offer maintenance, optimization, and feature delivery after launch.",
+      },
+    ]}
+  />
+
+  <ContactSection
+    title="Contact our team"
+    subtitle="We respond within one business day."
+  />
+  <GL />
+  <GLPlaces />
+</Layout>
+
+<style>
+  .marquee {
+    padding: 2rem 0;
+    z-index: 9;
+  }
+</style>

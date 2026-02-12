@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Marketplace Growth Loops for Supply & Demand">
+  <HeroHome
+    title="Marketplace Growth Loops for Supply & Demand"
+    subtitle="Simple growth loops that keep both sides of your marketplace engaged."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">Marketplace • 7 min read • Nov 30, 2025</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Balance both sides</h2>
+        <p class="u-text">
+          Keep supply and demand in sync by focusing on liquidity, trust, and
+          repeat interactions.
+        </p>
+        <h3 class="u-heading">Loop examples</h3>
+        <ul class="u-text">
+          <li>Supplier referrals unlock buyer incentives</li>
+          <li>Buyer reviews improve supplier conversion</li>
+          <li>Saved searches trigger supplier listings</li>
+          <li>Reorder flows reduce friction</li>
+        </ul>
+        <h3 class="u-heading">Measurement</h3>
+        <p class="u-text">
+          Monitor liquidity, match rate, and repeat transactions per cohort.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Grow your marketplace</h2>
+      <Button title="Book a session" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>

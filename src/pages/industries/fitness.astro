@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Fitness & Wellness Industry">
+  <HeroHome
+    title="Fitness & Wellness Industry"
+    subtitle="Digital fitness solutions that motivate and track progress."
+    cta={{ title: "Discuss Your Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Fitness Technology That Motivates</h2>
+        <p class="u-text">
+          We build fitness and wellness platforms that keep users engaged and
+          help them reach their health goals. From workout tracking to nutrition
+          planning, our solutions combine beautiful design with motivating
+          features that drive long-term engagement.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Solutions</h3>
+          <ul class="u-text">
+            <li>Fitness tracking apps</li>
+            <li>Workout & class booking</li>
+            <li>Nutrition & meal planning</li>
+            <li>Personal trainer platforms</li>
+            <li>Meditation & mindfulness apps</li>
+            <li>Gym management systems</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Features</h3>
+          <ul class="u-text">
+            <li>Activity & progress tracking</li>
+            <li>Video workouts & streaming</li>
+            <li>Social challenges & leaderboards</li>
+            <li>Wearable device sync</li>
+            <li>Goal setting & reminders</li>
+            <li>Community features</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Technologies</h3>
+          <ul class="u-text">
+            <li>React Native mobile apps</li>
+            <li>Apple Health & Google Fit</li>
+            <li>Video streaming (HLS)</li>
+            <li>Push notifications</li>
+            <li>Stripe subscriptions</li>
+            <li>Analytics & insights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Build your fitness platform</h2>
+      <Button title="Let's talk" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

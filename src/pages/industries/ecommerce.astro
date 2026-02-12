@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="E-commerce Industry Solutions">
+  <HeroHome
+    title="E-commerce Industry Solutions"
+    subtitle="Convert visitors into customers with optimized online stores."
+    cta={{ title: "Discuss Your Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">E-commerce That Drives Sales</h2>
+        <p class="u-text">
+          We build high-converting e-commerce platforms that provide seamless
+          shopping experiences across all devices. From product catalogs to
+          checkout optimization, we help brands increase revenue and customer
+          lifetime value.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Solutions</h3>
+          <ul class="u-text">
+            <li>Custom online stores</li>
+            <li>Multi-vendor marketplaces</li>
+            <li>Subscription commerce</li>
+            <li>B2B wholesale portals</li>
+            <li>Product configurators</li>
+            <li>Inventory management</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Features</h3>
+          <ul class="u-text">
+            <li>Payment gateway integration</li>
+            <li>Cart abandonment recovery</li>
+            <li>Personalized recommendations</li>
+            <li>Loyalty programs</li>
+            <li>Reviews & ratings</li>
+            <li>Analytics & reporting</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Platforms</h3>
+          <ul class="u-text">
+            <li>Shopify & Shopify Plus</li>
+            <li>WooCommerce</li>
+            <li>Custom headless commerce</li>
+            <li>Stripe & PayPal</li>
+            <li>Algolia search</li>
+            <li>CDN & performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Launch your online store</h2>
+      <Button title="Let's talk" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import AboutSection from "../components/AboutSection.astro";
+import ValuesSection from "../components/ValuesSection.astro";
+import StepsTimeline from "../components/StepsTimeline.astro";
+import Testimonials from "../components/Testimonials.astro";
+---
+
+<Layout title="About">
+  <HeroHome
+    title="About VIIO"
+    subtitle="A software agency focused on branding, UI and UX design, and full-stack development."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <AboutSection
+    subtitle="Who we are"
+    title="Design, engineering, and QA under one roof"
+    text="We build products for teams that need a reliable partner. Our crew includes strategists, designers, engineers, and QA specialists who collaborate from discovery to launch."
+    stats={[
+      { value: "40+", label: "Specialists" },
+      { value: "8", label: "Product studios" },
+      { value: "3", label: "Global offices" },
+      { value: "24/7", label: "Support coverage" },
+    ]}
+  />
+
+  <ValuesSection
+    title="Mission, vision, and values"
+    subtitle="We keep delivery simple, transparent, and measurable."
+    items={[
+      {
+        title: "Mission",
+        text: "Guide organizations from idea to launch with clear branding, thoughtful UX, and robust engineering.",
+      },
+      {
+        title: "Vision",
+        text: "Make high-quality software delivery accessible to teams of every size and industry.",
+      },
+      {
+        title: "Values",
+        text: "Clarity, craftsmanship, accountability, and ongoing partnership.",
+      },
+    ]}
+  />
+
+  <StepsTimeline
+    title="Our operating model"
+    items={[
+      {
+        title: "Discovery and alignment",
+        text: "We define product goals, audiences, and success metrics with shared clarity.",
+      },
+      {
+        title: "Strategic planning",
+        text: "Roadmap creation, technical architecture, and resource planning with clear milestones.",
+      },
+      {
+        title: "Design and development",
+        text: "We move from UX to UI to development in focused sprints with iterative feedback.",
+      },
+      {
+        title: "Testing and validation",
+        text: "Rigorous QA testing, performance tuning, and user acceptance before any release.",
+      },
+      {
+        title: "Launch and optimize",
+        text: "Post-launch we iterate on analytics, performance, and roadmap execution.",
+      },
+    ]}
+  />
+
+  <Testimonials
+    title="What clients say"
+    subtitle="Long-term relationships built on trust and results."
+    items={[
+      {
+        quote:
+          "The team matched our speed and delivered a brand and product system that scales.",
+        name: "Cameron Lee",
+        role: "CEO",
+        company: "Aurora Health",
+      },
+      {
+        quote:
+          "The UX and engineering teams collaborated seamlessly and met every launch milestone.",
+        name: "Kira Patel",
+        role: "Director of Product",
+        company: "Stratus Cloud",
+      },
+      {
+        quote:
+          "Their QA team improved our release confidence and reduced regressions quickly.",
+        name: "Miles Grant",
+        role: "CTO",
+        company: "Harbor Systems",
+      },
+    ]}
+  />
+
+</Layout>

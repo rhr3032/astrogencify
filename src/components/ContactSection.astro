@@ -1,0 +1,170 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section class="sy-contact">
+  <div class="u-container container">
+    <div class="content">
+      <h2 class="u-heading title" data-sy-reveal="words">{title}</h2>
+      {subtitle ? (
+        <p class="u-text subtitle" data-sy-reveal="lines">{subtitle}</p>
+      ) : null}
+      <div class="cards">
+        <div class="card glass-card">
+          <p class="u-text label">Email</p>
+          <p class="u-heading">hello@viio.agency</p>
+        </div>
+        <div class="card glass-card">
+          <p class="u-text label">Phone</p>
+          <p class="u-heading">+1 (212) 555-0186</p>
+        </div>
+        <div class="card glass-card">
+          <p class="u-text label">Location</p>
+          <p class="u-heading">New York, NY</p>
+        </div>
+      </div>
+    </div>
+    <form class="form glass-card">
+      <div class="field">
+        <label for="ct-name">Full name</label>
+        <input id="ct-name" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="ct-email">Email</label>
+        <input id="ct-email" name="email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="ct-company">Company</label>
+        <input id="ct-company" name="company" type="text" />
+      </div>
+      <div class="field">
+        <label for="ct-subject">Subject</label>
+        <input id="ct-subject" name="subject" type="text" />
+      </div>
+      <div class="field full">
+        <label for="ct-message">Message</label>
+        <textarea id="ct-message" name="message" rows={5}></textarea>
+      </div>
+      <button type="submit" class="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .sy-contact {
+    margin: 8rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .title {
+    --fs: 2.6rem;
+  }
+
+  .subtitle {
+    --fs: var(--font-size-md);
+    color: var(--color-text-alt);
+  }
+
+  .cards {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background: transparent;
+    border: none;
+  }
+
+  .label {
+    --fs: var(--font-size-xs);
+    --fw: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-alt);
+    margin-bottom: 0.5rem;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    @media (--mq-phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .field.full {
+    grid-column: 1 / -1;
+  }
+
+  label {
+    --fs: var(--font-size-xs);
+    --fw: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-alt);
+  }
+
+  input,
+  textarea {
+    border-radius: 0.8rem;
+    border: 1px solid rgba(var(--rgb-text), 0.15);
+    padding: 0.75rem 1rem;
+    font: inherit;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 8rem;
+  }
+
+  .submit {
+    grid-column: 1 / -1;
+    border-radius: 999px;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    background: var(--color-brand-1);
+    color: var(--color-white);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+</style>

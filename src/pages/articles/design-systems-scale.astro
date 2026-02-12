@@ -1,0 +1,85 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Design Systems That Scale Across Teams">
+  <HeroHome
+    title="Design Systems That Scale Across Teams"
+    subtitle="Build a living system with clear ownership, tokens, and governance."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">Design • 7 min read • Jan 08, 2026</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Start with principles</h2>
+        <p class="u-text">
+          Define brand and UX principles early to guide decisions across
+          components, patterns, and documentation.
+        </p>
+        <h3 class="u-heading">Key building blocks</h3>
+        <ul class="u-text">
+          <li>Tokens for color, typography, spacing</li>
+          <li>Component library with versioning</li>
+          <li>Usage guidelines and examples</li>
+          <li>Governance and review process</li>
+        </ul>
+        <h3 class="u-heading">Adoption tips</h3>
+        <p class="u-text">
+          Start small with core components, then expand through shared workflows
+          and regular office hours.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Scale your design system</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>

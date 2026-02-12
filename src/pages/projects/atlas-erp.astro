@@ -1,0 +1,148 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Atlas ERP Suite">
+  <HeroHome
+    title="Atlas ERP Suite"
+    subtitle="A modular ERP that unified finance, HR, and operations for a global manufacturer."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="case">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Overview</h2>
+        <p class="u-text">
+          We rebuilt a legacy ERP into a modern, role-based platform with
+          workflow automation and real-time reporting. The new system reduced
+          operational bottlenecks across 12 regions.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Challenge</h3>
+          <p class="u-text">
+            Fragmented data, slow reporting, and inconsistent workflows across
+            departments.
+          </p>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Solution</h3>
+          <p class="u-text">
+            A unified ERP with modular rollout, data pipelines, and a shared UX
+            system.
+          </p>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Results</h3>
+          <ul class="u-text">
+            <li>45 percent faster reporting</li>
+            <li>20 plus integrations</li>
+            <li>Global rollout in 6 months</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stack">
+        <h3 class="u-heading">Tech stack</h3>
+        <ul class="u-text">
+          <li>React, TypeScript</li>
+          <li>Node.js, PostgreSQL</li>
+          <li>SSO and data warehouse</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Build your ERP roadmap</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .case {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 44rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+    box-shadow: 0 12px 28px rgba(10, 20, 40, 0.08);
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card p,
+  .card ul {
+    color: var(--color-text-alt);
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .stack {
+    margin-top: 2.5rem;
+  }
+
+  .stack h3 {
+    --fs: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stack ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.4rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

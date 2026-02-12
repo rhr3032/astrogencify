@@ -1,0 +1,169 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import StepsTimeline from "../components/StepsTimeline.astro";
+import PricingGrid from "../components/PricingGrid.astro";
+import ContactSection from "../components/ContactSection.astro";
+---
+
+<Layout title="Services">
+  <HeroHome
+    title="Services"
+    subtitle="From strategy to deployment—branding, design, development, QA, consulting, and cloud infrastructure."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <ServicesSection
+    title="What we deliver"
+    subtitle="Each service can be engaged separately or bundled into a full product team."
+    items={[
+      {
+        title: "Branding and identity",
+        text: "Research, messaging, naming, and brand systems that align product and marketing.",
+        tags: ["Strategy", "Positioning", "Visual identity"],
+        link: { title: "Service details", url: "/services/branding" },
+      },
+      {
+        title: "UI and UX design",
+        text: "User research, UX flows, and polished interfaces that convert and retain.",
+        tags: ["UX", "UI", "Design systems"],
+        link: { title: "Service details", url: "/services/ui-ux" },
+      },
+      {
+        title: "Webflow design & development",
+        text: "Custom Webflow sites with advanced interactions, CMS, and SEO optimization.",
+        tags: ["Webflow", "CMS", "Interactions"],
+        link: { title: "Service details", url: "/services/webflow-design" },
+      },
+      {
+        title: "Framer design & development",
+        text: "Interactive Framer sites with smooth animations and smart components.",
+        tags: ["Framer", "Animations", "React"],
+        link: { title: "Service details", url: "/services/framer-design" },
+      },
+      {
+        title: "Web development",
+        text: "Front-end, back-end, CMS, and integrations for modern web experiences.",
+        tags: ["Web apps", "Dashboards", "CMS"],
+        link: { title: "Service details", url: "/services/web-development" },
+      },
+      {
+        title: "Mobile development",
+        text: "Native and cross-platform app development with secure architecture.",
+        tags: ["Android", "iOS", "React Native"],
+        link: { title: "Service details", url: "/services/mobile-development" },
+      },
+      {
+        title: "SaaS product delivery",
+        text: "MVP to scale delivery with billing flows, analytics, and admin tooling.",
+        tags: ["SaaS", "B2B", "Analytics"],
+        link: { title: "Service details", url: "/services/saas-products" },
+      },
+      {
+        title: "ERP and LMS systems",
+        text: "Enterprise-grade systems with role-based access and workflows.",
+        tags: ["ERP", "LMS", "Integrations"],
+        link: { title: "Service details", url: "/services/erp-lms" },
+      },
+      {
+        title: "QA and testing",
+        text: "Manual, automated, and performance testing with release management.",
+        tags: ["QA", "Automation", "Release"],
+        link: { title: "Service details", url: "/services/qa-testing" },
+      },
+      {
+        title: "Business consulting & strategy",
+        text: "Digital transformation consulting, technology roadmaps, and strategic planning.",
+        tags: ["Strategy", "Transformation", "Consulting"],
+        link: { title: "Service details", url: "/services/business-consulting" },
+      },
+      {
+        title: "DevOps & cloud infrastructure",
+        text: "Scalable cloud architecture with CI/CD pipelines and container orchestration.",
+        tags: ["DevOps", "AWS", "Kubernetes"],
+        link: { title: "Service details", url: "/services/devops-cloud" },
+      },
+      {
+        title: "API development & integration",
+        text: "RESTful and GraphQL APIs with secure third-party system integrations.",
+        tags: ["REST", "GraphQL", "Integrations"],
+        link: { title: "Service details", url: "/services/api-development" },
+      },
+    ]}
+  />
+
+  <StepsTimeline
+    title="Engagement model"
+    items={[
+      {
+        title: "Discovery sprint",
+        text: "Define scope, requirements, and quick prototypes in a short sprint.",
+      },
+      {
+        title: "Design and planning",
+        text: "User research, wireframes, and technical architecture planning with your team.",
+      },
+      {
+        title: "Delivery pods",
+        text: "Dedicated cross-functional teams for design, development, and QA.",
+      },
+      {
+        title: "Quality assurance",
+        text: "Comprehensive testing, performance optimization, and user acceptance validation.",
+      },
+      {
+        title: "Support and growth",
+        text: "Ongoing optimization, testing, and roadmap execution.",
+      },
+    ]}
+  />
+
+  <PricingGrid
+    title="Flexible plans"
+    subtitle="Pick a model that matches your stage and delivery needs."
+    items={[
+      {
+        title: "Brand sprint",
+        price: "From $4k",
+        note: "Brand strategy and identity for early-stage teams.",
+        features: [
+          "Discovery workshop",
+          "Brand positioning",
+          "Visual system",
+          "Brand guidelines",
+        ],
+        link: { title: "Talk to us", url: "/contact" },
+      },
+      {
+        title: "Product pod",
+        price: "From $12k",
+        note: "Full product design and engineering pod.",
+        features: [
+          "UX and UI design",
+          "Web or mobile development",
+          "QA coverage",
+          "Sprint reporting",
+        ],
+        link: { title: "Talk to us", url: "/contact" },
+      },
+      {
+        title: "Enterprise",
+        price: "Custom",
+        note: "ERP and LMS delivery with dedicated support.",
+        features: [
+          "Architecture planning",
+          "Security reviews",
+          "Data migration",
+          "Support SLA",
+        ],
+        link: { title: "Talk to us", url: "/contact" },
+      },
+    ]}
+  />
+
+  <ContactSection
+    title="Ready to talk?"
+    subtitle="Let us know what you need and we will build the right team."
+  />
+</Layout>

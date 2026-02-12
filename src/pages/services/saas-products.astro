@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="SaaS Products">
+  <HeroHome
+    title="SaaS Product Delivery"
+    subtitle="From MVP to scale with subscription flows and analytics."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Overview</h2>
+        <p class="u-text">
+          We build SaaS platforms that combine a strong UX with reliable
+          architecture. Our teams handle onboarding, billing, analytics, and
+          integrations so you can scale faster.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Deliverables</h3>
+          <ul class="u-text">
+            <li>MVP planning and roadmap</li>
+            <li>Subscription and billing flows</li>
+            <li>Analytics dashboards</li>
+            <li>Admin tooling and roles</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Process</h3>
+          <ul class="u-text">
+            <li>Product strategy and UX</li>
+            <li>Design system and UI</li>
+            <li>Full-stack development</li>
+            <li>QA and launch support</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Stack</h3>
+          <ul class="u-text">
+            <li>React and Next.js</li>
+            <li>Node.js and GraphQL</li>
+            <li>Stripe and analytics tooling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Launch a new SaaS product</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

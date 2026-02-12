@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Food & Restaurant Industry">
+  <HeroHome
+    title="Food & Restaurant Industry"
+    subtitle="Restaurant tech that streamlines orders and delights diners."
+    cta={{ title: "Discuss Your Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Restaurant Technology That Delivers</h2>
+        <p class="u-text">
+          We create food service technology platforms that make ordering
+          effortless and operations smooth. From online ordering to restaurant
+          management, our solutions help food businesses increase revenue and
+          improve customer satisfaction.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Solutions</h3>
+          <ul class="u-text">
+            <li>Online ordering platforms</li>
+            <li>Food delivery apps</li>
+            <li>Restaurant POS systems</li>
+            <li>Table reservation systems</li>
+            <li>Kitchen display systems</li>
+            <li>Ghost kitchen management</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Features</h3>
+          <ul class="u-text">
+            <li>Menu management</li>
+            <li>Real-time order tracking</li>
+            <li>Loyalty & rewards programs</li>
+            <li>Customer reviews & ratings</li>
+            <li>Delivery optimization</li>
+            <li>Inventory management</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Integrations</h3>
+          <ul class="u-text">
+            <li>Payment processing (Square, Stripe)</li>
+            <li>Delivery services (DoorDash, Uber Eats)</li>
+            <li>POS systems</li>
+            <li>SMS & email notifications</li>
+            <li>Google Maps</li>
+            <li>Restaurant analytics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Launch your restaurant platform</h2>
+      <Button title="Get started" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

@@ -1,0 +1,85 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="QA Automation Playbook for Fast Releases">
+  <HeroHome
+    title="QA Automation Playbook for Fast Releases"
+    subtitle="Balance manual and automated testing with a risk-based QA strategy."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">QA • 9 min read • Dec 28, 2025</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Start with critical paths</h2>
+        <p class="u-text">
+          Identify the workflows that directly impact revenue and trust, then
+          automate them first.
+        </p>
+        <h3 class="u-heading">Automation layers</h3>
+        <ul class="u-text">
+          <li>Unit tests for logic and data integrity</li>
+          <li>API tests for integration contracts</li>
+          <li>End-to-end tests for user journeys</li>
+          <li>Performance and load testing</li>
+        </ul>
+        <h3 class="u-heading">Release readiness</h3>
+        <p class="u-text">
+          Pair QA automation with regression checklists and release gates to
+          reduce production risk.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Build a QA automation plan</h2>
+      <Button title="Talk to QA" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>

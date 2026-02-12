@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Branding and Identity">
+  <HeroHome
+    title="Branding and Identity"
+    subtitle="Positioning, messaging, and visual systems that align product and market."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="detail">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Overview</h2>
+        <p class="u-text">
+          We help teams define a clear brand foundation and express it across
+          every product touchpoint. The result is a system that scales with your
+          roadmap and keeps your message consistent.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Deliverables</h3>
+          <ul class="u-text">
+            <li>Brand strategy and positioning</li>
+            <li>Messaging and tone of voice</li>
+            <li>Visual identity and logo system</li>
+            <li>Brand guidelines and asset kit</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Process</h3>
+          <ul class="u-text">
+            <li>Discovery workshops and research</li>
+            <li>Competitive and audience analysis</li>
+            <li>Concept exploration and refinement</li>
+            <li>Final system and rollout</li>
+          </ul>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Tools</h3>
+          <ul class="u-text">
+            <li>Figma and Adobe</li>
+            <li>Brand strategy frameworks</li>
+            <li>Presentation and guideline docs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Ready to elevate your brand?</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .detail {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 42rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

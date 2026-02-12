@@ -1,0 +1,146 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Nova SaaS Platform">
+  <HeroHome
+    title="Nova SaaS Platform"
+    subtitle="A SaaS ops dashboard for subscription and churn analytics."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="case">
+    <div class="u-container">
+      <div class="intro">
+        <h2 class="u-heading">Overview</h2>
+        <p class="u-text">
+          We designed and built a SaaS platform that unifies subscription
+          analytics, billing insights, and customer health scores. The platform
+          supports cross-team reporting in real time.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card glass-card">
+          <h3 class="u-heading">Challenge</h3>
+          <p class="u-text">
+            Limited visibility into churn drivers and subscription health.
+          </p>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Solution</h3>
+          <p class="u-text">
+            A centralized dashboard with forecasting and billing insights.
+          </p>
+        </div>
+        <div class="card glass-card">
+          <h3 class="u-heading">Results</h3>
+          <ul class="u-text">
+            <li>22 percent churn reduction</li>
+            <li>Unified analytics for 5 teams</li>
+            <li>Improved billing accuracy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stack">
+        <h3 class="u-heading">Tech stack</h3>
+        <ul class="u-text">
+          <li>Next.js and TypeScript</li>
+          <li>Node.js, PostgreSQL</li>
+          <li>Stripe and analytics tooling</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Launch your SaaS platform</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .case {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    max-width: 44rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro h2 {
+    --fs: 2.4rem;
+  }
+
+  .intro p {
+    color: var(--color-text-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+    box-shadow: 0 12px 28px rgba(10, 20, 40, 0.08);
+  }
+
+  .card h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+    margin-bottom: 1rem;
+  }
+
+  .card p,
+  .card ul {
+    color: var(--color-text-alt);
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .stack {
+    margin-top: 2.5rem;
+  }
+
+  .stack h3 {
+    --fs: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stack ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.4rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+
+  .cta h2 {
+    --fs: 2.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

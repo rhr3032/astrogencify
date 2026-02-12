@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Cloud Cost Optimization Without Downtime">
+  <HeroHome
+    title="Cloud Cost Optimization Without Downtime"
+    subtitle="Reduce spend through architecture fixes, autoscaling, and governance."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">Cloud • 7 min read • Dec 20, 2025</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Find waste fast</h2>
+        <p class="u-text">
+          Identify idle resources, oversized instances, and noisy neighbors with
+          a quick audit of your cloud billing and performance logs.
+        </p>
+        <h3 class="u-heading">Quick wins</h3>
+        <ul class="u-text">
+          <li>Right-size compute and database instances</li>
+          <li>Implement autoscaling policies</li>
+          <li>Use reserved instances for steady workloads</li>
+          <li>Archive cold data to cheaper storage</li>
+        </ul>
+        <h3 class="u-heading">Governance</h3>
+        <p class="u-text">
+          Set budgets, alerts, and ownership to keep costs under control.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Optimize your cloud spend</h2>
+      <Button title="Book a review" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>

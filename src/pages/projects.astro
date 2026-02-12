@@ -1,0 +1,235 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import Testimonials from "../components/Testimonials.astro";
+import ContactSection from "../components/ContactSection.astro";
+---
+
+<Layout title="Projects">
+  <HeroHome
+    title="Projects"
+    subtitle="Selected work across SaaS, enterprise systems, and mobile products."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <ProjectsSection
+    title="All projects"
+    subtitle="Every engagement includes strategy, design, development, and QA coverage."
+    items={[
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "Atlas ERP dashboard",
+          width: 6000,
+          height: 4000,
+        },
+        title: "Atlas ERP Suite",
+        summary: "Unified finance, HR, and operations for a global manufacturer.",
+        meta: ["ERP", "Operations", "Global rollout"],
+        link: { title: "View project", url: "/projects/atlas-erp" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "Meridian LMS learning view",
+          width: 2689,
+          height: 4032,
+        },
+        title: "Meridian LMS",
+        summary: "Learning platform with cohort analytics and certification flows.",
+        meta: ["LMS", "EdTech", "Mobile"],
+        link: { title: "View project", url: "/projects/meridian-lms" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "Nova SaaS analytics",
+          width: 3734,
+          height: 5359,
+        },
+        title: "Nova SaaS Platform",
+        summary: "Subscription analytics and admin tooling for B2B teams.",
+        meta: ["SaaS", "B2B", "Analytics"],
+        link: { title: "View project", url: "/projects/nova-saas" },
+      },
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "Pulse mobile banking interface",
+          width: 6000,
+          height: 4000,
+        },
+        title: "Pulse Mobile Banking",
+        summary: "Secure mobile app with onboarding and wallet management.",
+        meta: ["Mobile", "FinTech", "Security"],
+        link: { title: "View project", url: "/projects/pulse-mobile" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "Cobalt health portal",
+          width: 2689,
+          height: 4032,
+        },
+        title: "Cobalt Health Portal",
+        summary: "Patient portal with telehealth scheduling and care plans.",
+        meta: ["Health", "Web", "Integrations"],
+        link: { title: "View project", url: "/projects/cobalt-health" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "Apex e-commerce platform",
+          width: 3734,
+          height: 5359,
+        },
+        title: "Apex E-commerce",
+        summary: "Multi-vendor marketplace with advanced search and seller dashboards.",
+        meta: ["E-commerce", "Marketplace", "2M products"],
+        link: { title: "View project", url: "/projects/apex-ecommerce" },
+      },
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "Zenith CRM dashboard",
+          width: 6000,
+          height: 4000,
+        },
+        title: "Zenith CRM",
+        summary: "Sales CRM with pipeline automation and custom reporting.",
+        meta: ["CRM", "Sales", "Automation"],
+        link: { title: "View project", url: "/projects/zenith-crm" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "FitTrack mobile app",
+          width: 2689,
+          height: 4032,
+        },
+        title: "FitTrack Pro",
+        summary: "Fitness tracking with AI workout plans and nutrition guidance.",
+        meta: ["Fitness", "Mobile", "AI/ML"],
+        link: { title: "View project", url: "/projects/fittrack-pro" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "PropLink real estate platform",
+          width: 3734,
+          height: 5359,
+        },
+        title: "PropLink",
+        summary: "Real estate platform with MLS integration and virtual tours.",
+        meta: ["Real Estate", "MLS", "Virtual Tours"],
+        link: { title: "View project", url: "/projects/proplink" },
+      },
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "TravelHub booking system",
+          width: 6000,
+          height: 4000,
+        },
+        title: "TravelHub",
+        summary: "Hotel and tour booking platform with real-time availability.",
+        meta: ["Travel", "Booking", "Multi-currency"],
+        link: { title: "View project", url: "/projects/travelhub" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "SecureVault cybersecurity dashboard",
+          width: 2689,
+          height: 4032,
+        },
+        title: "SecureVault",
+        summary: "Security monitoring platform with threat detection and alerts.",
+        meta: ["Cybersecurity", "Monitoring", "Real-time"],
+        link: { title: "View project", url: "/projects/securevault" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "LegalPro case management",
+          width: 3734,
+          height: 5359,
+        },
+        title: "LegalPro",
+        summary: "Case management system with document automation and client portal.",
+        meta: ["Legal Tech", "Case Management", "Automation"],
+        link: { title: "View project", url: "/projects/legalpro" },
+      },
+      {
+        image: {
+          src: "/image-1.jpg",
+          alt: "FactoryIQ manufacturing dashboard",
+          width: 6000,
+          height: 4000,
+        },
+        title: "FactoryIQ",
+        summary: "Manufacturing execution system with IoT integration and analytics.",
+        meta: ["Manufacturing", "IoT", "Industry 4.0"],
+        link: { title: "View project", url: "/projects/factoryiq" },
+      },
+      {
+        image: {
+          src: "/image-2.jpg",
+          alt: "MarketPulse analytics platform",
+          width: 2689,
+          height: 4032,
+        },
+        title: "MarketPulse",
+        summary: "Marketing analytics with campaign tracking and ROI reporting.",
+        meta: ["MarTech", "Analytics", "Multi-channel"],
+        link: { title: "View project", url: "/projects/marketpulse" },
+      },
+      {
+        image: {
+          src: "/image-3.jpg",
+          alt: "FoodOrder restaurant platform",
+          width: 3734,
+          height: 5359,
+        },
+        title: "FoodOrder",
+        summary: "Restaurant ordering system with delivery tracking and POS integration.",
+        meta: ["Food Tech", "Ordering", "Delivery"],
+        link: { title: "View project", url: "/projects/foodorder" },
+      },
+    ]}
+  />
+
+  <Testimonials
+    title="Client feedback"
+    subtitle="Results across industries with consistent delivery outcomes."
+    items={[
+      {
+        quote:
+          "The team delivered a complex ERP roadmap with steady progress and clear reporting.",
+        name: "Sara Lane",
+        role: "COO",
+        company: "Atlas Foods",
+      },
+      {
+        quote:
+          "We gained a full design system and app launch within three months.",
+        name: "Marco Ruiz",
+        role: "Product Director",
+        company: "Pulse Bank",
+      },
+      {
+        quote:
+          "Their QA team helped stabilize every release and improved user trust.",
+        name: "Alina Chen",
+        role: "Head of Engineering",
+        company: "Cobalt Health",
+      },
+    ]}
+  />
+
+  <ContactSection
+    title="Have a project in mind?"
+    subtitle="We can help plan, design, and deliver it."
+  />
+</Layout>

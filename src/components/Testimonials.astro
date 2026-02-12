@@ -1,0 +1,101 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  items: {
+    quote: string;
+    name: string;
+    role: string;
+    company: string;
+  }[];
+}
+
+const { title, subtitle, items } = Astro.props;
+---
+
+<section class="sy-testimonials">
+  <div class="u-container container">
+    <div class="heading">
+      <h2 class="u-heading title" data-sy-reveal="words">{title}</h2>
+      {subtitle ? (
+        <p class="u-text subtitle" data-sy-reveal="lines">{subtitle}</p>
+      ) : null}
+    </div>
+    <div class="grid">
+      {items.map((item) => (
+        <article class="card glass-card">
+          <p class="u-text quote" data-sy-reveal="lines">"{item.quote}"</p>
+          <p class="u-heading name" data-sy-reveal="words">{item.name}</p>
+          <p class="u-text role" data-sy-reveal="lines">
+            {item.role} - {item.company}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .sy-testimonials {
+    margin: 8rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .title {
+    --fs: 2.6rem;
+  }
+
+  .subtitle {
+    --fs: var(--font-size-md);
+    color: var(--color-text-alt);
+    max-width: 38em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (--mq-phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .quote {
+    --fs: var(--font-size-sm);
+    color: var(--color-text-alt);
+  }
+
+  .name {
+    --fs: 1.1rem;
+    --fw: 500;
+  }
+
+  .role {
+    --fs: var(--font-size-xs);
+    color: var(--color-text-alt);
+  }
+</style>

@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Mobile Onboarding Checklist for Higher Activation">
+  <HeroHome
+    title="Mobile Onboarding Checklist for Higher Activation"
+    subtitle="Increase completion rates with progressive disclosure and smart defaults."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">Mobile • 5 min read • Nov 22, 2025</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Reduce steps</h2>
+        <p class="u-text">
+          Ask for the minimum needed to reach first value, then request more
+          data later when trust is higher.
+        </p>
+        <h3 class="u-heading">Checklist</h3>
+        <ul class="u-text">
+          <li>Social login or magic links</li>
+          <li>Progress indicators and microcopy</li>
+          <li>Permission requests at the right time</li>
+          <li>Contextual tips and empty states</li>
+        </ul>
+        <h3 class="u-heading">Measure impact</h3>
+        <p class="u-text">
+          Track completion rate, time-to-value, and drop-off points.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Improve your onboarding</h2>
+      <Button title="Talk to us" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>

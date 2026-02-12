@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="Telehealth UX Patterns Patients Trust">
+  <HeroHome
+    title="Telehealth UX Patterns Patients Trust"
+    subtitle="Create calm, accessible telehealth flows that reduce no-shows and confusion."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">Healthcare • 6 min read • Dec 08, 2025</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Design for clarity</h2>
+        <p class="u-text">
+          Patients need reassurance and simple guidance before appointments.
+          Reduce cognitive load with clear steps and status indicators.
+        </p>
+        <h3 class="u-heading">Key patterns</h3>
+        <ul class="u-text">
+          <li>Pre-visit checklists and reminders</li>
+          <li>Simple device checks and fallback options</li>
+          <li>Accessibility-friendly typography</li>
+          <li>Privacy notices and consent</li>
+        </ul>
+        <h3 class="u-heading">Operational gains</h3>
+        <p class="u-text">
+          Reduce no-shows and improve satisfaction with a streamlined flow.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Improve your telehealth UX</h2>
+      <Button title="Talk to our team" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>

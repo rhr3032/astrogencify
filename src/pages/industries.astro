@@ -1,0 +1,168 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroHome from "../components/HeroHome.astro";
+import IndustrySection from "../components/IndustrySection.astro";
+import ContactSection from "../components/ContactSection.astro";
+---
+
+<Layout title="Specialized Industries">
+  <HeroHome
+    title="Specialized Industry Expertise"
+    subtitle="Domain-specific solutions for businesses with unique challenges."
+    cta={{ title: "Discuss Your Needs", url: "/contact" }}
+  />
+
+  <IndustrySection
+    title="Industries we serve"
+    subtitle="Deep expertise in regulated, competitive, and rapidly evolving sectors."
+    items={[
+      {
+        title: "Fintech",
+        text: "Secure financial platforms with compliance, encryption, and seamless UX for payments, banking, and investing.",
+        tags: ["Payments", "Banking", "Crypto"],
+        link: { title: "Learn more", url: "/industries/fintech" },
+      },
+      {
+        title: "Healthcare & Fitness",
+        text: "HIPAA-compliant health tech, telemedicine, fitness tracking, and patient care platforms.",
+        tags: ["Telemedicine", "EHR", "Wellness"],
+        link: { title: "Learn more", url: "/industries/healthcare" },
+      },
+      {
+        title: "E-commerce",
+        text: "High-converting online stores, marketplaces, and subscription commerce platforms that drive revenue.",
+        tags: ["Shopify", "Marketplaces", "Subscriptions"],
+        link: { title: "Learn more", url: "/industries/ecommerce" },
+      },
+      {
+        title: "EdTech",
+        text: "Learning management systems, online courses, and educational apps that engage students.",
+        tags: ["LMS", "E-learning", "EdTech"],
+        link: { title: "Learn more", url: "/industries/edtech" },
+      },
+      {
+        title: "Real Estate",
+        text: "Property listing platforms, MLS integration, virtual tours, and CRM for real estate professionals.",
+        tags: ["Property Tech", "MLS", "Virtual Tours"],
+        link: { title: "Learn more", url: "/industries/real-estate" },
+      },
+      {
+        title: "Travel & Hospitality",
+        text: "Booking platforms, tour management, and guest experience systems for travel brands.",
+        tags: ["Booking", "Hotels", "Tours"],
+        link: { title: "Learn more", url: "/industries/travel" },
+      },
+      {
+        title: "Fitness & Wellness",
+        text: "Fitness tracking, workout streaming, nutrition planning, and gym management platforms.",
+        tags: ["Fitness Apps", "Wellness", "Tracking"],
+        link: { title: "Learn more", url: "/industries/fitness" },
+      },
+      {
+        title: "Cybersecurity",
+        text: "Security monitoring, threat intelligence, and compliance management platforms.",
+        tags: ["Security", "Threat Detection", "Compliance"],
+        link: { title: "Learn more", url: "/industries/cybersecurity" },
+      },
+      {
+        title: "Legal",
+        text: "Case management, document automation, and client portals for law firms and legal departments.",
+        tags: ["LegalTech", "Case Management", "E-discovery"],
+        link: { title: "Learn more", url: "/industries/legal" },
+      },
+      {
+        title: "Manufacturing",
+        text: "MES, supply chain management, and predictive maintenance for smart manufacturing.",
+        tags: ["Industry 4.0", "IoT", "MES"],
+        link: { title: "Learn more", url: "/industries/manufacturing" },
+      },
+      {
+        title: "Marketing & Advertising",
+        text: "Marketing automation, campaign management, and analytics dashboards for agencies and brands.",
+        tags: ["MarTech", "Automation", "Analytics"],
+        link: { title: "Learn more", url: "/industries/marketing" },
+      },
+      {
+        title: "Food & Restaurant",
+        text: "Online ordering, delivery apps, POS systems, and reservation platforms for restaurants.",
+        tags: ["Online Ordering", "POS", "Delivery"],
+        link: { title: "Learn more", url: "/industries/food-restaurant" },
+      },
+    ]}
+  />
+
+  <section class="why-industry">
+    <div class="u-container">
+      <div class="content">
+        <h2 class="u-heading" data-sy-reveal="words">Why industry expertise matters</h2>
+        <div class="grid">
+          <div class="item">
+            <h3 class="u-heading">Compliance & Regulations</h3>
+            <p class="u-text">
+              We understand industry-specific requirements like HIPAA, PCI-DSS,
+              GDPR, and SOC 2, ensuring your platform meets all compliance
+              standards from day one.
+            </p>
+          </div>
+          <div class="item">
+            <h3 class="u-heading">Domain Knowledge</h3>
+            <p class="u-text">
+              Our teams have built dozens of platforms in your space—we know the
+              workflows, pain points, and expectations that matter to your users.
+            </p>
+          </div>
+          <div class="item">
+            <h3 class="u-heading">Faster Time to Market</h3>
+            <p class="u-text">
+              Industry expertise means fewer revisions, better requirements, and
+              proven patterns that accelerate development and reduce risk.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactSection
+    title="Need a specialized solution?"
+    subtitle="Tell us about your industry and we'll share relevant case studies and expertise."
+  />
+</Layout>
+
+<style>
+  .why-industry {
+    margin: 6rem 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .content h2 {
+    --fs: 2.8rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+
+    @media (--mq-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .item h3 {
+    --fs: 1.4rem;
+    --fw: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .item p {
+    color: var(--color-text-alt);
+  }
+</style>

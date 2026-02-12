@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroHome from "../../components/HeroHome.astro";
+import Button from "../../components/Button.astro";
+---
+
+<Layout title="The Product Discovery Sprint Playbook">
+  <HeroHome
+    title="The Product Discovery Sprint Playbook"
+    subtitle="A two-week framework to align stakeholders, validate assumptions, and define a clear roadmap."
+    cta={{ title: "Start a Project", url: "/contact" }}
+  />
+
+  <section class="article">
+    <div class="u-container">
+      <div class="meta u-text">Strategy • 8 min read • Jan 12, 2026</div>
+      <div class="content glass-card">
+        <h2 class="u-heading">Why discovery matters</h2>
+        <p class="u-text">
+          Discovery reduces risk by aligning teams on goals, user needs, and
+          measurable success metrics before design or engineering begins.
+        </p>
+        <h3 class="u-heading">Sprint structure</h3>
+        <ul class="u-text">
+          <li>Stakeholder alignment and outcome mapping</li>
+          <li>User interviews and workflow audit</li>
+          <li>Value proposition and success metrics</li>
+          <li>Solution sketching and prioritization</li>
+          <li>Roadmap and scope definition</li>
+        </ul>
+        <h3 class="u-heading">Deliverables</h3>
+        <p class="u-text">
+          A validated problem statement, prioritized backlog, and a phased
+          roadmap for MVP and scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="u-container">
+      <h2 class="u-heading">Run your discovery sprint</h2>
+      <Button title="Book a workshop" url="/contact" arrow />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .article {
+    margin: 6rem 0;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .content {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .content h2 {
+    --fs: 2rem;
+  }
+
+  .content h3 {
+    --fs: 1.2rem;
+    --fw: 500;
+  }
+
+  .content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+    color: var(--color-text-alt);
+  }
+
+  .cta {
+    margin: 4rem 0 8rem;
+  }
+</style>
