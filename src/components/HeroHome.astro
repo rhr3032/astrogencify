@@ -116,10 +116,18 @@ const { title, subtitle, cta } = Astro.props;
     }
   }
 
+
   .subtitle {
     --fs: var(--font-size-lg);
     max-width: 25em;
     margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (--mq-phone) {
+    .subtitle {
+      margin-bottom: 1.25rem;
+    }
   }
 
 
