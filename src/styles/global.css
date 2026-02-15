@@ -82,6 +82,18 @@ a {
   text-decoration: none;
 }
 
+/* Global CTA button spacing utility */
+.cta {
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+@media (--mq-phone) {
+  .cta {
+    margin-top: 1.25rem;
+  }
+}
+
 button {
   color: currentcolor;
 }
